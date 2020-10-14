@@ -1,0 +1,260 @@
+function appHeader(objID, objClass, bgcolor ){
+
+var obj= document.createElement("app-header");
+
+obj.style.position= "fixed";
+
+obj.style.width= "100vw";
+
+obj.style.height= "3em";
+
+obj.style.backgroundColor= bgcolor;
+
+//obj.style.borderBottom="0.2px solid " + color + "";
+
+obj.style.left="0";
+
+obj.style.top="0";
+
+obj.className= objClass;
+
+document.body.appendChild(obj);
+
+    
+
+}
+
+function appFooter(objID, objClass, bgcolor, color ){
+
+var obj= document.createElement("app-header");
+
+obj.style.position= "fixed";
+
+obj.style.width= "100vw";
+
+obj.style.height= "3em";
+
+obj.style.backgroundColor= bgcolor;
+
+obj.style.borderTop="0.2px solid " + color + "";
+
+obj.style.left="0";
+
+obj.style.bottom="0";
+
+obj.className= objClass;
+
+document.body.appendChild(obj);
+
+    
+
+}
+
+function onEvent(objTag, objPos, objEvent, objFunc){
+
+var obj= document.createElement("script");
+
+obj.innerHTML= "document.getElementsByTagName('" + objTag + "')[" + objPos + "]." + objEvent + "= function () { " + objFunc + "};"
+
+document.body.appendChild(obj);
+
+    
+
+}
+
+function fcon(objName, objID, objClass, objStyle, evt, func){
+
+ var obj= document.createElement("fcon");
+
+ 
+
+obj.style.cssText= "font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 1.6em; display: inline-block; line-height: 1; text-transform: none; letter-spacing: normal; word-wrap: normal; white-space: nowrap;  direction: ltr; color:black; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale; font-feature-settings: 'liga'; position:fixed; ";
+
+obj.innerHTML= objName; 
+
+obj.id= objID;
+
+objClass= objClass;
+
+obj.style.cssText+= objStyle;
+
+document.body.appendChild(obj);
+
+var fconCount= document.getElementsByTagName("fcon").length;
+
+onEvent("fcon",fconCount-1, evt, func);
+
+    
+
+}
+
+function acon(objName, objID, objClass, objStyle, evt, func){
+
+ var obj= document.createElement("acon");
+
+ 
+
+obj.style.cssText= "font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 1.6em; display: inline-block; line-height: 1; text-transform: none; letter-spacing: normal; word-wrap: normal; white-space: nowrap;  direction: ltr; color:black; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale; font-feature-settings: 'liga'; position:absolute; ";
+
+obj.innerHTML= objName; 
+
+obj.id= objID;
+
+objClass= objClass;
+
+obj.style.cssText+= objStyle;
+
+document.body.appendChild(obj);
+
+var fconCount= document.getElementsByTagName("acon").length;
+
+onEvent("acon",fconCount-1, evt, func);
+
+    
+
+}
+
+function ftxt(objTxt, objID, objClass, objStyle, evt, func){
+
+var obj= document.createElement("ftxt");
+
+obj.style.position= "fixed";  
+
+obj.style.cssText+= objStyle;
+
+obj.id= objID;
+
+obj.className= objClass;
+
+obj.innerHTML= objTxt;
+
+document.body.appendChild(obj);
+
+var txtCount= document.getElementsByTagName("ftxt").length;
+
+onEvent("ftxt", txtCount-1, evt, func );
+
+    
+
+}
+
+function atxt(objTxt, objID, objClass, objStyle, evt, func){
+
+var obj= document.createElement("atxt");
+
+obj.style.position= "absolute";  
+
+obj.style.cssText+= objStyle;
+
+obj.id= objID;
+
+obj.className= objClass;
+
+obj.innerHTML= objTxt;
+
+document.body.appendChild(obj);
+
+var txtCount= document.getElementsByTagName("atxt").length;
+
+onEvent("atxt", txtCount-1, evt, func );
+
+    
+
+}
+
+function aimg(objSrc, objID, objClass, objStyle, evt, func){
+
+var obj= document.createElement("img");
+
+obj.style.position= "absolute";  
+
+obj.style.cssText+= objStyle;
+
+obj.id= objID;
+
+obj.className= objClass;
+
+obj.src= objSrc;
+
+document.body.appendChild(obj);
+
+var imgCount= document.getElementsByTagName("img").length;
+
+onEvent("img", imgCount-1, evt, func );
+
+    
+
+}
+
+function fimg(objSrc, objID, objClass, objStyle, evt, func){
+
+var obj= document.createElement("img");
+
+obj.style.position= "fixed";  
+
+obj.style.cssText+= objStyle;
+
+obj.id= objID;
+
+obj.className= objClass;
+
+obj.src= objSrc;
+
+document.body.appendChild(obj);
+
+var imgCount= document.getElementsByTagName("img").length;
+
+onEvent("img", imgCount-1, evt, func );
+
+    
+
+}
+
+function fbox(objTxt, objID, objClass, objStyle, evt, func){
+
+var obj= document.createElement("fbox");
+
+obj.style.position= "fixed";  
+
+obj.style.cssText+= objStyle;
+
+obj.id= objID;
+
+obj.className= objClass;
+
+obj.innerHTML= objTxt;
+
+document.body.appendChild(obj);
+
+var txtCount= document.getElementsByTagName("fbox").length;
+
+onEvent("fbox", txtCount-1, evt, func );
+
+    
+
+}
+
+function abox(objTxt, objID, objClass, objStyle, evt, func){
+
+var obj= document.createElement("abox");
+
+obj.style.position= "absolute";  
+
+obj.style.cssText+= objStyle;
+
+obj.id= objID;
+
+obj.className= objClass;
+
+obj.innerHTML= objTxt;
+
+document.body.appendChild(obj);
+
+var txtCount= document.getElementsByTagName("abox").length;
+
+onEvent("abox", txtCount-1, evt, func );
+
+    
+
+}
+
